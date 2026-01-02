@@ -1,19 +1,20 @@
 //WORST MEMORY USAGE
-pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> 
-{
-    let mut new_nums = nums.clone();
-    
-    for x in nums
-    {
-        new_nums.push(x);
-    }
-    new_nums
-}
+// pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> 
+// {
+//     let mut new_nums = nums.clone();
+//
+//     for x in nums
+//     {
+//         new_nums.push(x);
+//     }
+//     new_nums
+// }
+
 //LAZY WAY BUT SECOND BEST MEMORY USAGE
-pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> 
-{
-    nums.repeat(2)
-}
+// pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> 
+// {
+//     nums.repeat(2)
+// }
 
 //BEST
 pub fn get_concatenation(mut nums: Vec<i32>) -> Vec<i32> 
