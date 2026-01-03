@@ -1,17 +1,29 @@
-pub fn running_sum(nums: Vec<i32>) -> Vec<i32> 
-    {
-        let mut sum = 0;
-        let mut new_nums: Vec<i32> = Vec::new();
+// pub fn running_sum(nums: Vec<i32>) -> Vec<i32> 
+// {
+//     let mut sum = 0;
+//     let mut new_nums: Vec<i32> = Vec::new();
+//
+//     for x in nums
+//     {
+//         sum += x;
+//         new_nums.push(sum);
+//     }
+//
+//     new_nums
+// }
 
-        for x in nums
-        {
-            sum += x;
-            new_nums.push(sum);
-        }
+//FAST BUT SLOWER IN MEMORY
+// pub fn running_sum(nums: Vec<i32>) -> Vec<i32> 
+//    {
+//        nums.into_iter().scan(0, |sum, x| {*sum += x; Some(*sum)} ).collect()
+//    }
 
-        new_nums
-    }
-
+//FASTEST
+pub fn running_sum(mut nums: Vec<i32>) -> Vec<i32> 
+{
+    for x in 1..nums.len(){nums[x] += nums[x - 1];}
+    nums
+}
 fn main() 
 {
     let x = vec![1,2,3];
