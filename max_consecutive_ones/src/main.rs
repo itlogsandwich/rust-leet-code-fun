@@ -1,4 +1,26 @@
 
+// slightly less effiecent memory cost
+// pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32
+// {
+//     let mut max = 0;
+//     let mut count = 0;
+//     nums.iter().for_each(|x| 
+//     { 
+//         println!("{x}");
+//         if *x == 1
+//         {
+//             count += 1;
+//         }
+//         else
+//         {
+//             count = 0;
+//         }
+//
+//         max = std::cmp::max(max,count);
+//     });
+//     max
+// }
+
 pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32
 {
     let mut max = 0;
@@ -17,7 +39,6 @@ pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32
         max = std::cmp::max(max, count);
     }
     max
-
 }
 
 fn main() 
